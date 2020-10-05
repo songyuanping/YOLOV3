@@ -1,4 +1,4 @@
-# 第一次提交
+# 我的工作已经完成
 import 	torch
 import  time
 import multiprocessing
@@ -16,24 +16,6 @@ t0 = time.time()
 c = torch.matmul(a, b)
 t1 = time.time()
 print(a.device, t1 - t0, c.norm(2))
-
-device = torch.device('cuda')
-a = a.to(device)
-b = b.to(device)
-
-t0 = time.time()
-c = torch.matmul(a, b)
-t2 = time.time()
-print(a.device, t2 - t0, c.norm(2))
-
-t0 = time.time()
-c = torch.matmul(a, b)
-t2 = time.time()
-print(a.device, t2 - t0, c.norm(2))
-
-a=torch.randn(2,3,28,28)
-print(a.numel(),a.dim())
-
 
 
 
